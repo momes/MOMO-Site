@@ -14,10 +14,82 @@
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-     <title>Mo Enokida</title>
+    <title>MOMES</title>
 </head>
 
 <body id="body-container">
+    <div id="nav-container" class="container sticky-top">
+        <nav id="navbar" class="navbar flex-container navbar-expand-sm center row">
+            <a id="nav-brand" class="navbar-brand flex-container" href="#top" onClick="activateMomo()">
+                <h1>Momes</h1>
+            </a>
+            <ul class="navbar-nav flex-container">
+                <div class="navbar-collapse row" id="navbar-content">
+
+                    <li class="nav-item">
+                        <a id="nav-work" class="nav-link" href="#work" onClick="activateWork()">
+                            Work
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-about" class="nav-link" href="#about" onClick="activateAbout()">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-contact" class="nav-link" href="#contact" onClick="activateContact()">
+                            Contact
+                        </a>
+                    </li>
+
+                </div>
+            </ul>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="dropDown()">
+                    <span id="toggle-icon">&#8801;</span>
+                </button>
+                <div id="dropdown-content" class="dropdown-content" display="none">
+                    <a id="nav-work" class="nav-link" href="#work">
+                        Work
+                    </a>
+                    <a id="nav-about" class="nav-link" href="#about">
+                        About
+                    </a>
+                    <a id="nav-contact" class="nav-link" href="#contact">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="middle-img-container" class="row top">
+        <div id="middle-frame" class="col-12">
+            <div id="top-img-container" class="row">
+                <div id="top-frame" class="col-12">
+                    <div id="landing-text">
+                        <div id="landing-div" class="container flex-container">
+                            <div class="hello-row">
+                                <h1 id="landing-title">Hi there,
+                                    <br />
+                                    <span id="orange">Welcome to my personal site.</span>
+                                    <br /> <span id="turquoise">Please check out my work!</span>
+                                    <small>
+                                        <h1 id="sincerely">Sincerely,
+                                            <br /> Momes
+                                        </h1>
+                                </h1>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <!--
     <div id="nav-container" class="container sticky-top">
         <nav id="navbar" class="navbar flex-container navbar-expand-sm center row">
             <a id="nav-brand" class="navbar-brand flex-container" href="#top">
@@ -56,51 +128,31 @@
             </div>
         </nav>
     </div>
-
-    <div id="landing-page">
-        <div id="middle-img-container" class="row sticky-top">
-            <div id="middle-frame" class="col-12"></div>
-
-        </div>
-        <div id="top-img-container" class="row sticky-top">
-            <div id="top-frame" class="col-12">
-            </div>
-
-        </div>
-
-
-    </div>
-
+-->
 
     <div id="work">
         <div id="top-break" class="row"></div>
         <div class="row">
-            <h1 id="work-text"><span id="works-text">Works</span> in progress...</h1>
+            <h1 id="work-text">I'm currently <span id="working">working</span> on...</h1>
         </div>
         <div id="work-container" class="row rounded">
             <div id="work-item-container" class="col-12 col-md-6">
                 <div id="preview-container-1" class="container">
                 </div>
             </div>
-            <div id="work-item-container" class="col-12 col-md-6">
+            <div id="work-item-container-text" class="col-12 col-md-6">
                 <div id="preview-container-text" class="container flex-container rounded">
                     <h2 id="work-title">icandoanything.me</h2>
                     <h3>This is a music video game.
-                        contributions: graphic design
+                        <br /> (not yet released)
+                        <h4><i>contributions:</i> graphic design</h4>
                     </h3>
                 </div>
             </div>
         </div>
-        <div id="work-container" class="row rounded">
-            <div id="work-item-container" class="col-12 col-md-4">
-                <div id="preview-container-2" class="container flex-container rounded">
-                </div>
-            </div>
-        </div>
-        <div id="work-container" class="row rounded">
 
-        </div>
-
+        <div id="top-break" class="row"></div>
+        <div id="top-break" class="row"></div>
     </div>
 
 
@@ -121,7 +173,8 @@
                 </p>
 
                 <h3>Are you hiring?</h3>
-                <p id="resume-text">Download my resume <a id="resume-pdf" href="MoEnokidaResume.pdf">here.</a></p>
+                <p id="resume-text">Download my resume <a id="resume-pdf" href="./assets/MoEnokidaResume.pdf">here.</a>
+                </p>
             </div>
             <div id="about-left-bottom" class="col-12 col-md-6">
 
@@ -148,24 +201,47 @@
 
         </div>
     </div>
-
-
     <script>
-    const middle = document.getElementById("middle-img-container");
-    var bodyRect = document.body.getBoundingClientRect(),
-    middleRect = middle.getBoundingClientRect(),
-    middleOffset = middleRect.top - bodyRect.top;
 
-    alert('bottom is ' + middleOffset + ' vertical pixels from top');
+        var navbrand = document.getElementById("nav-brand");
+        var work = document.getElementById("nav-work");
+        var about = document.getElementById("nav-about");
+        var contact = document.getElementById("nav-contact");
+        var dropContent = document.getElementById("dropdown-content");
 
-    window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    console.log(scrolled);
-    if (scrolled >= bottomOffset) {
-        console.log('START ANIMATION')
-        document.getElementById('bottom-frame').classList.add('animate');
-    }
-    });
+        function dropDown() {
+            var x = document.getElementById("dropdown-content");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+        function activateMomo() {
+            navbrand.style.color = "#2e3e33";
+            work.style.color = "white";
+            about.style.color = "white";
+            contact.style.color = "white";
+        }
+        function activateWork() {
+            work.style.color = "#769472";
+            navbrand.style.color = "white";
+            about.style.color = "white";
+            contact.style.color = "white";
+        }
+        function activateAbout() {
+            about.style.color = "#f6a956";
+            navbrand.style.color = "white";
+            work.style.color = "white";
+            contact.style.color = "white";
+        }
+        function activateContact() {
+            contact.style.color = "#2e3e33";
+            navbrand.style.color = "white";
+            work.style.color = "white";
+            about.style.color = "white";
+        }
+
     </script>
 </body>
 
