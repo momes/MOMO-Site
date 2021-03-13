@@ -1,0 +1,428 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFE997;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    max-width: 100vw;
+    padding: 0;
+}
+h1 {
+    font-weight: 900;
+    font-style: italic;
+}
+h2 {
+    font-weight: 900;
+    font-style: italic;
+    
+}
+
+h3{
+        font-weight: 800;
+        font-style: italic;
+        color: #2e3e33;
+    
+}
+
+.top-padding {
+    min-height: 5vh;
+    max-height: 5vh;
+}
+
+#nav-container {
+    padding: 2%;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+    z-index: 20;
+}
+.dropdown {
+    display: none;
+}
+#nav-item  {
+    align-self: center;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#navbar{
+    background-color: rgba(151, 63, 50, 0.9);
+box-shadow: 0 8px 32px 0 rgba(9, 15, 105, 0.37);
+backdrop-filter: blur( 1.5px );
+-webkit-backdrop-filter: blur( 1.5px );
+border-radius: 10px;
+border: 1px solid rgba( 151, 63, 50, 0.18 );
+}
+
+#navbar-content{
+    justify-content: space-evenly;
+    
+}
+
+.navbar-brand {
+    color:white;
+    margin-left: 5%;
+}
+
+.nav-link {
+    color:white;
+}
+#start-scale {
+    height: 100vh;
+}
+#landing-page {
+    background-color: #FFE997;
+    min-height: 450vh;
+    min-width: 100vw;
+    max-width: 100vw;
+}
+
+#bottom-img-container {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    z-index: 1;
+    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+    width: auto;
+}
+
+#middle-img-container {
+    padding:0;
+    margin: 0;
+    overflow: hidden;
+    z-index: 2;
+
+    min-height: 100vh;
+    height: 100vh;
+    width: auto;
+}
+
+#top-img-container {
+    padding:0;
+    margin: 0;
+    overflow: hidden;
+    z-index: 3;
+
+    min-height: 100vh;
+    height: 100vh;
+    width: auto;
+}
+
+.animate {
+    animation: bottomzoom 3s infinite;
+    animation-iteration-count: 1;
+}
+
+@keyframes bottomzoom {
+    0% {
+        background-size: 410% auto;
+
+      -webkit-background-size: 410%;
+    }
+    
+    100% {
+      background-size: 100% auto;
+      -webkit-background-size: 100%;
+    }
+  }
+
+#middle-frame {
+    background-image: url('./assets/middle-frame.png');
+    background-position: center;
+    min-height:100vh;
+    width: auto;
+      background-size: 100% auto;
+      -webkit-background-size: 100%;
+    background-repeat: no-repeat;
+  animation-iteration-count: 1;
+  z-index: 2;
+}
+
+#top-frame {
+    background-image: url('./assets/top-frame.png');
+    background-position: center;
+    min-height:100vh;
+    width: auto;
+      background-size: 100% auto;
+      -webkit-background-size: 100%;
+    background-repeat: no-repeat;]
+  z-index: 3;
+}
+
+
+
+#about-left-bottom {
+    display: block;
+    background-image: url('.assets/me_and_diego.png');
+    background-size: 100%;
+    height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+
+
+
+
+#middle {
+    min-height: 100vh;
+}
+
+
+#work {
+    background-color: #ea8754;
+    padding-top: 15vh;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    min-height: 110vh;
+    padding-bottom: 5vh;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#about-container, #contact-container {
+    min-height: 70vh; 
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#work-container {
+    background-color:#f3ddac;
+    margin-top: 2em;
+    padding-top: 0;
+    min-height: 40vh;
+
+box-shadow: 0 8px 32px 0 rgba(151, 63, 50, 0.8);
+backdrop-filter: blur( 1.5px );
+-webkit-backdrop-filter: blur( 1.5px );
+border-radius: 10px;
+border: 1px solid rgba( 151, 63, 50, 0.18 );
+    
+}
+
+#about-container {
+    flex-direction: row;
+    min-height: 110vh; 
+    margin-top: 0;
+    padding-top: 1.5em;
+}
+
+#work-header{
+    text-align: bottom;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#work-text{
+    padding: 0px;
+    color: #769472;
+    
+}
+
+#works-text{
+    -webkit-text-stroke: 3px #2e3e33;
+    font-size: 1.5em;
+    color: #ea8754;
+    
+}
+#work-item-container {
+    display: flex;
+    text-align: center;
+    max-height: 50vh;
+    padding: 1%;
+    padding-bottom: 5%;
+}
+#preview-container-1 {
+    background-image:url('./assets/1.gif');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 40vh;
+    height: auto;
+    width: 95%;
+    
+}
+
+#preview-container-text {
+    padding: 10%;
+    font-size: 1em;
+    min-height: 50%;
+    margin-top:0;
+    width: 100%;
+}
+
+#preview-container-3 {
+    background-color:white;
+    min-height: 50%;
+    margin-top:0;
+    width: 100%;
+}
+
+#resume-pdf {
+    font-style: italic;
+    text-decoration: underline;
+    color:rgba(151, 63, 50, 0.9)
+}
+
+
+#work-image {
+    height: 100%;
+    width: auto;
+}
+#about-container {
+    flex-direction: row-reverse;
+}
+
+#hi {
+    font-size: 1.5em;
+    -webkit-text-stroke: 2px #f6a956;
+    letter-spacing: 0.03em;
+    color: #769472;
+    
+}
+#hi-there {
+    color: #f6a956;
+}
+
+#email {
+    color: #f6a956;
+    letter-spacing: .05em;
+}
+
+#work-title {
+    color: #769472;
+    letter-spacing: 0.1em;
+
+}
+#about {
+    background-color:#769472;
+    min-height: 110vh;
+    padding-top: 15vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100vw;
+}
+
+#contact-container {
+    padding-top: 5%;
+}
+
+#lets-work {
+    -webkit-text-stroke: 2px #f6a956;
+    color: #2e4034;
+    font-size: 5em;
+    letter-spacing: 0.02em;
+}
+
+#about-right-top {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#about-text {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1em;
+    color: #f3ddac
+}
+
+#contact {
+    background-color: #2e4034;
+    min-height: 110vh;
+    padding-top: 15vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100vw;
+}
+
+#top-break {
+    min-height: 5vh;
+    max-height: 5vh;
+    margin-bottom: 3vh;
+}
+
+#resume-text {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.1em;
+    color: #f3ddac
+}
+@media only screen and (max-width: 600px) {
+    #nav-container {
+        display: inline-block;
+        padding: 0;
+        max-width: 100vw;
+    }
+
+    .navbar-nav {
+        display:none;
+    }
+    /* The dropdown container */
+.dropdown {
+    display: block;
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+    /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+ 
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+#about-left-bottom {
+    display: block;
+    background-image: url('.assets/me_and_diego.png');
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    margin-bottom: 10vh;
+}
+}

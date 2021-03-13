@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+     <title>Mo Enokida</title>
+</head>
+
+<body id="body-container">
+    <div id="nav-container" class="container sticky-top">
+        <nav id="navbar" class="navbar flex-container navbar-expand-sm center row">
+            <a id="nav-brand" class="navbar-brand flex-container" href="#top">
+                <h1>Momo</h1>
+            </a>
+            <ul class="navbar-nav flex-container">
+                <div class="navbar-collapse row" id="navbar-content">
+
+                    <li class="nav-item">
+                        <a id="nav-work" class="nav-link" href="#work">
+                            Work
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-about" class="nav-link" href="#about">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-item" class="nav-link" href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </div>
+            </ul>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Dropdown
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="landing-page">
+        <div id="middle-img-container" class="row sticky-top">
+            <div id="middle-frame" class="col-12"></div>
+
+        </div>
+        <div id="top-img-container" class="row sticky-top">
+            <div id="top-frame" class="col-12">
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div id="work">
+        <div id="top-break" class="row"></div>
+        <div class="row">
+            <h1 id="work-text"><span id="works-text">Works</span> in progress...</h1>
+        </div>
+        <div id="work-container" class="row rounded">
+            <div id="work-item-container" class="col-12 col-md-6">
+                <div id="preview-container-1" class="container">
+                </div>
+            </div>
+            <div id="work-item-container" class="col-12 col-md-6">
+                <div id="preview-container-text" class="container flex-container rounded">
+                    <h2 id="work-title">icandoanything.me</h2>
+                    <h3>This is a music video game.
+                        contributions: graphic design
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div id="work-container" class="row rounded">
+            <div id="work-item-container" class="col-12 col-md-4">
+                <div id="preview-container-2" class="container flex-container rounded">
+                </div>
+            </div>
+        </div>
+        <div id="work-container" class="row rounded">
+
+        </div>
+
+    </div>
+
+
+    <div id="about">
+        <div id="top-break" class="row"></div>
+        <div id="about-container" class="row">
+            <div id="about-right-top" class="col-12 col-md-6">
+                <h1 id="hi-there"><span id="hi">Hi there,</span>
+                    <br />my name is Momo!
+                </h1>
+
+                <h3>(a.k.a. Momes)</h3>
+                <p id="about-text">You can find me & my dog Diego in Los Angeles. My creative work includes
+                    illustrations, paintings &
+                    frame-by-frame animations.
+                    I am currently learning full-stack web development!
+                    <b>:)</b>
+                </p>
+
+                <h3>Are you hiring?</h3>
+                <p id="resume-text">Download my resume <a id="resume-pdf" href="MoEnokidaResume.pdf">here.</a></p>
+            </div>
+            <div id="about-left-bottom" class="col-12 col-md-6">
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div id="contact">
+        <div id="top-break" class="row"></div>
+
+        <div id="top-break" class="row"></div>
+        <div id="contact-container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div id="contact-container" class="col-12 col-sm-6">
+                    <h1 id="lets-work">Let's work!</h1>
+                    <h4 id="email">Email: mo.enokida@gmail.com</h4>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script>
+    const middle = document.getElementById("middle-img-container");
+    var bodyRect = document.body.getBoundingClientRect(),
+    middleRect = middle.getBoundingClientRect(),
+    middleOffset = middleRect.top - bodyRect.top;
+
+    alert('bottom is ' + middleOffset + ' vertical pixels from top');
+
+    window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    console.log(scrolled);
+    if (scrolled >= bottomOffset) {
+        console.log('START ANIMATION')
+        document.getElementById('bottom-frame').classList.add('animate');
+    }
+    });
+    </script>
+</body>
+
+</html>
