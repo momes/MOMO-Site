@@ -58,9 +58,6 @@ a {
     max-width: 600px;
     z-index: 20;
 }
-#dropdown {
-    display: none;
-}
 #nav-item  {
     align-self: center;
 }
@@ -349,7 +346,7 @@ h4 {
     vertical-align: center;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    padding-right: 15vw;
+    padding-right: 20vw;
 }
 
 #orange {
