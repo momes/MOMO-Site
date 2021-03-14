@@ -43,24 +43,10 @@
                     </li>
 
                 </div>
+
             </ul>
-            <div class="dropdown">
-                <button class="dropbtn" onclick="dropDown()">
-                    <span id="toggle-icon">&#8801;</span>
-                </button>
-                <div id="dropdown-content" class="dropdown-content" display="none">
-                    <a id="nav-work" class="nav-link" href="#work">
-                        Work
-                    </a>
-                    <a id="nav-about" class="nav-link" href="#about">
-                        About
-                    </a>
-                    <a id="nav-contact" class="nav-link" href="#contact">
-                        Contact
-                    </a>
-                </div>
-            </div>
-        </nav>
+    </div>
+    </nav>
     </div>
     <div id="middle-img-container" class="row top">
         <div id="middle-frame" class="col-12">
@@ -210,12 +196,7 @@
         var dropContent = document.getElementById("dropdown-content");
 
         function dropDown() {
-            var x = document.getElementById("dropdown-content");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
+            console.log(click)
         }
         function activateMomo() {
             navbrand.style.color = "#2e3e33";
